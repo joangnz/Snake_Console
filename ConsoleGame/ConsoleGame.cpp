@@ -8,15 +8,15 @@ int main() {
 	// Randomizer
 	srand(time(NULL));
 
-	Snake User; // Create a Snake Object with the new position
-	Apple Apple; // Create an Apple Object with the new position
-
 	bool playing = true;
 
 	Mapping::printTitle();
 	system("pause");
 
 	do {
+		Snake User; // Create a Snake Object with the new position
+		Apple Apple; // Create an Apple Object with the new position
+
 		Utility::resetAll(User);
 		int points = 0;
 
