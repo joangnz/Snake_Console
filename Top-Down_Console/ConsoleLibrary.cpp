@@ -75,6 +75,16 @@ namespace ConsoleLibrary
 	}
 
 	void Utility::resetAll(Snake& Snake) {
+
+		for (int i = 0; i < Snake.length-1; i++)
+		{
+			Snake.body.erase(Snake.body.begin());
+		}
+
+		if (Snake.collided) {
+			Snake.body.erase(Snake.body.begin());
+		}
+
 		Snake.collided = false;
 		Snake.length = 1;
 		Snake.position[0] = 10;
